@@ -55,3 +55,8 @@ sed -i 's/$description/'$description'/g' $service_name.service
 sed -i 's~$command~'$command'~g' $service_name.service
 sed -i 's~$arguments~'$arguments'~g' $service_name.service
 sed -i 's/$user/'$user'/g' $service_name.service
+
+mv $service_name.service /etc/systemd/system
+systemctl enable $service_name
+
+echo "Done! Service is now enabled. You can control it with 'service $service_name start|stop|reload'"
