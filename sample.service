@@ -1,0 +1,15 @@
+[Unit]
+Description=$service_name $description
+After=syslog.target
+
+[Service]
+User=$user
+ExecStart=/bin/sh -c "$command$arguments$extra"
+KillMode=control-group
+SuccessExitStatus=143
+OOMScoreAdjust=-999
+Restart=on-failure
+RestartSec=20s
+
+[Install]
+WantedBy=multi-user.target
