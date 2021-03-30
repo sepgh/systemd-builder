@@ -69,5 +69,3 @@ fi
 
 
 echo "Done! Service is now enabled. You can control it with 'service $service_name start|stop|reload'"
-
-rm $service_name.service
