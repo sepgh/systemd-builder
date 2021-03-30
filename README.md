@@ -5,7 +5,7 @@ Shell script to make simple systemd service and add it to your system
 
 Here is the fastest way to run the script:
 
-```
+```shell
 # Get sample.service
 curl https://raw.githubusercontent.com/sepehr-gh/systemd-builder/main/sample.service > sample.service
 
