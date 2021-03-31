@@ -1,10 +1,10 @@
 [Unit]
-Description=var_description
+Description=RepZ Ultimate Bot
 After=syslog.target
 
 [Service]
-User=var_user
-ExecStart=/bin/sh -c "var_command var_arguments"
+User=repz
+ExecStart=/bin/sh -c "/home/repz/software/rzub.jar --server.port=8083 --conf.rzub.settings=/home/repz/software/settings.json"
 KillMode=control-group
 SuccessExitStatus=143
 OOMScoreAdjust=-999
