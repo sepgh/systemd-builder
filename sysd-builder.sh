@@ -6,6 +6,7 @@ if [ ! -f sample.service ] ; then
     if command -v curl &> /dev/null || command -v wget &> /dev/null
     then
         wget https://raw.githubusercontent.com/sepehr-gh/systemd-builder/main/sample.service 2>/dev/null || curl -O  https://raw.githubusercontent.com/sepehr-gh/systemd-builder/main/sample.service
+        echo "downloaded 'sample.service' to current directory"
     else
         exit
     fi
